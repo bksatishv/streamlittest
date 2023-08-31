@@ -1,23 +1,11 @@
 import streamlit as st
-# Python program to find the largest number among the three input numbers
 
-# change the values of num1, num2 and num3
-# for a different result
-num1 = 10
-num2 = 14
-num3 = 12
+st.title('Greatest of Three Numbers') # Set Title of the webapp
 
-# uncomment following lines to take three numbers from user
-#num1 = float(input("Enter first number: "))
-#num2 = float(input("Enter second number: "))
-#num3 = float(input("Enter third number: "))
+choice1 = st.number_input('Enter First number') #Accepts a number input
+choice2 = st.number_input('Enter Second number')
+choice3 = st.number_input('Enter Third number')
 
-if (num1 >= num2) and (num1 >= num3):
-   largest = num1
-elif (num2 >= num1) and (num2 >= num3):
-   largest = num2
-else:
-   largest = num3
+string = f'Maximum value is {max(choice1,choice2,choice3)}'
 
-print("The largest number is", largest)
-st.title('Greatest of 3 numbers')
+st.write(string)
